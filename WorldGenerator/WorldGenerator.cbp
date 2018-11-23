@@ -34,11 +34,11 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="Figure.cpp" />
-		<Unit filename="Figure.h" />
 		<Unit filename="include/Coords.h" />
+		<Unit filename="include/Couleur.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Coords.cpp" />
+		<Unit filename="src/Couleur.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
