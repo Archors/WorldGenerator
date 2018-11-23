@@ -6,9 +6,11 @@ class Couleur
 {
     public:
         Couleur();
+        Couleur(int rouge,int vert,int bleu):m_r(rouge),m_g(vert),m_b(bleu){};
         virtual ~Couleur();
 
     protected:
+        int m_r,m_g,m_b;
 
     private:
 };
