@@ -36,9 +36,17 @@
 		</Compiler>
 		<Unit filename="include/Coords.h" />
 		<Unit filename="include/Couleur.h" />
+		<Unit filename="include/Ellipse.h" />
+		<Unit filename="include/Figure.h" />
+		<Unit filename="include/Polygon.h" />
+		<Unit filename="include/Triangle.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Coords.cpp" />
 		<Unit filename="src/Couleur.cpp" />
+		<Unit filename="src/Ellipse.cpp" />
+		<Unit filename="src/Figure.cpp" />
+		<Unit filename="src/Polygon.cpp" />
+		<Unit filename="src/Triangle.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
