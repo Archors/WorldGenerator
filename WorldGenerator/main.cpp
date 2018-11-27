@@ -4,7 +4,6 @@
 #include "Rectangle.h"
 #include "Ellipse.h"
 #include <vector>
-#include "Arbre.h"
 
 using namespace std;
 

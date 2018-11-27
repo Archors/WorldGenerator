@@ -14,7 +14,7 @@ class Arbre
     public:
         Arbre(){};
         virtual ~Arbre(){};
-        void medessiner();
+        virtual void medessiner();
 
     protected:
         std::vector <Rectangle> m_rectangle;
