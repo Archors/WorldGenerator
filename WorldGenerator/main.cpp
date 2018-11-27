@@ -1,17 +1,23 @@
 #include <iostream>
 #include "Figure.h"
 #include "Triangle.h"
+#include "Rectangle.h"
+#include "Ellipse.h"
 #include <vector>
-// j'ai mis ces includes juste pour faire le test du polymorphisme avec plusieurs heritage de classes abstraites(!= de heritage multiple)
-// j'ai toujours fait du polymorphisme avec heritage simple
-// là ça marche avec plusieurs heritage consecutif
+#include "Arbre.h"
+
 using namespace std;
 
 int main()
 {
+    // J'AI AMELIORER LE DIAGRAMME DE CLASSE GO CHECKER 10:22 27/11
     vector <Figure*> test;
     test.push_back(new Triangle());
+    test.push_back(new Rectangle());
+    test.push_back(new Ellipse());
     test[0]->sedessiner();
+    test[1]->sedessiner();
+    test[2]->sedessiner();
     return 0;
 }
 //les destructeurs par default font le taff osef de la memoire

@@ -8,7 +8,7 @@ class Triangle : public Polygon
     public:
         Triangle();
         virtual ~Triangle();
-        virtual void sedessiner(){std::cout<<"ceci est un test\n";};
+        virtual void sedessiner(){std::cout<<"ceci est un triangle\n";};
     protected:
 
     private:
