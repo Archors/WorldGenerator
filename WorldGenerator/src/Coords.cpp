@@ -13,3 +13,20 @@ Coords & Coords::operator=(Coords const & a)
     this->m_y=a.m_y;
     return *this;
 }
+
+Coords::Coords(Coords const & copie)
+{
+    m_x=copie.m_x;
+    m_y=copie.m_y;
+}
+
+void Coords::afficher(std::ostream & flux)const
+{
+    flux<<m_x<<","<<m_y;
+}
+
+std::ostream& operator<<(std::ostream &flux,Coords const & lacoord)
+{
+    lacoord.afficher(flux);
+    return flux;
+}

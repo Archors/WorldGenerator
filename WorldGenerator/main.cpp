@@ -1,22 +1,14 @@
 #include <iostream>
-#include "Figure.h"
 #include "Triangle.h"
-#include "Rectangle.h"
-#include "Ellipse.h"
 #include <vector>
 
 using namespace std;
 
+// IMPORTANT : effacer à chaque fois le fin de div de l'objet et le </svg> avant de compiler
 int main()
 {
-    // J'AI AMELIORER LE DIAGRAMME DE CLASSE GO CHECKER 10:22 27/11
     vector <Figure*> test;
-    test.push_back(new Triangle());
-    test.push_back(new Rectangle());
-    test.push_back(new Ellipse());
+    test.push_back(new Triangle(Coords(200,10),Coords(190,250),Coords(160,210)));
     test[0]->sedessiner();
-    test[1]->sedessiner();
-    test[2]->sedessiner();
     return 0;
 }
-//les destructeurs par default font le taff osef de la memoire

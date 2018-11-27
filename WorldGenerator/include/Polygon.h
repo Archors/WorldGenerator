@@ -3,18 +3,18 @@
 #include <vector>
 #include "Coords.h"
 #include "Figure.h"
-
+#include "Couleur.h"
 
 class Polygon : public Figure
 {
     public:
         Polygon(){};
+        Polygon(Coords bary,Couleur coul):Figure(bary,coul){};
         virtual ~Polygon(){};
-        virtual void sedessiner()=0;
+        void sedessiner();
 
     protected:
         std::vector <Coords> m_coords;
-
 
     private:
 };

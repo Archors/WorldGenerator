@@ -6,10 +6,11 @@
 class Triangle : public Polygon
 {
     public:
-        Triangle();
-        virtual ~Triangle();
-        virtual void sedessiner(){std::cout<<"ceci est un triangle\n";};
+        Triangle(){};
+        Triangle(Coords const x,Coords const y,Coords const z);
+        virtual ~Triangle(){};
     protected:
+        int m_nbdepoint;
 
     private:
 };

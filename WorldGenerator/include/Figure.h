@@ -8,6 +8,7 @@ class Figure
 {
     public:
         Figure(){};
+        Figure(Coords bary,Couleur coul):m_barycentre(bary),m_couleur(coul){};
         virtual ~Figure(){};
         virtual void sedessiner()=0;
 
@@ -15,8 +16,6 @@ class Figure
         Coords m_barycentre;// Pour manipuler les objets dans les graines
         // on peut le barycentre et on fait des translation a partir de celui-ci
         Couleur m_couleur;
-
-    private:
 };
 
 #endif // FIGURE_H
