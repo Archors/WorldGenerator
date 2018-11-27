@@ -8,11 +8,11 @@ class Ellipse : public Figure
 {
     public:
         Ellipse(){};
+        Ellipse(Coords const & barycentre,Couleur const & lacoul,double rayonx,double rayony):Figure(barycentre,lacoul),m_rayonx(rayonx),m_rayony(rayony){};
         virtual ~Ellipse(){};
         virtual void sedessiner(){std::cout<<"je suis une ellipse\n";};
 
     protected:
-        Coords m_centre;
         double m_rayonx,m_rayony;
 
     private:

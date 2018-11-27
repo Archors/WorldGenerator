@@ -8,7 +8,7 @@ void Polygon::sedessiner()
     std::string const nomFichier("output.svg");
     std::ofstream monFlux(nomFichier.c_str(),std::ios::app);//ouverture de fichier, code identique à celui d'openclassroom
 
-    std::cout<<m_barycentre;//simple test
+    std::cout<<m_barycentre<<std::endl<<m_couleur<<std::endl;//simple test
 
     // On rajoute le "</svg>" à la fin pour fermer la div du svg, il faudras le changer pour le code d'après
     if(monFlux)
@@ -20,7 +20,9 @@ void Polygon::sedessiner()
         {
         monFlux<<m_coords[i]<<" ";    // On affiche les coordonnées les une à la suite des autres
         }
-        monFlux<<" \" /> \n";       // On ferme la div du polygon
+        monFlux<<"\"";
+        monFlux<<" fill=\" "<<m_couleur<<"\" ";
+        monFlux<<" /> \n";       // On ferme la div du polygon
     }
     else
     {

@@ -11,7 +11,7 @@ class Polygon : public Figure
         Polygon(){};
         Polygon(Coords bary,Couleur coul):Figure(bary,coul){};
         virtual ~Polygon(){};
-        void sedessiner();
+        virtual void sedessiner();
 
     protected:
         std::vector <Coords> m_coords;

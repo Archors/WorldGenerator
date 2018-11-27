@@ -9,7 +9,7 @@ class Coords
         Coords(){};
         Coords (double x,double y):m_x(x),m_y(y){};
         Coords(Coords const & copie);
-        virtual ~Coords();
+        virtual ~Coords(){};
         double getx(){return m_x;};
         double gety(){return m_y;};
 
