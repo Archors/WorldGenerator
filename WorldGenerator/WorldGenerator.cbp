@@ -34,6 +34,7 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/Arbre.h" />
 		<Unit filename="include/Coords.h" />
 		<Unit filename="include/Couleur.h" />
 		<Unit filename="include/Ellipse.h" />
@@ -41,6 +42,7 @@
 		<Unit filename="include/Polygon.h" />
 		<Unit filename="include/Triangle.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Arbre.cpp" />
 		<Unit filename="src/Coords.cpp" />
 		<Unit filename="src/Couleur.cpp" />
 		<Unit filename="src/Ellipse.cpp" />
