@@ -12,7 +12,7 @@ class Plan
         void medessiner();
 
     protected:
-        std::vector <Object> Objets;
+        std::vector <Object> m_objet;
 
     private:
 };
