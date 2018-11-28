@@ -34,6 +34,8 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Seed.cpp" />
+		<Unit filename="Seed.h" />
 		<Unit filename="include/Arbre.h" />
 		<Unit filename="include/Coords.h" />
 		<Unit filename="include/Couleur.h" />

@@ -10,7 +10,7 @@ class Ellipse : public Figure
         Ellipse(){};
         Ellipse(Coords const & barycentre,Couleur const & lacoul,double rayonx,double rayony):Figure(barycentre,lacoul),m_rayonx(rayonx),m_rayony(rayony){};
         virtual ~Ellipse(){};
-        virtual void sedessiner(){std::cout<<"je suis une ellipse\n";};
+        virtual void sedessiner();
 
     protected:
         double m_rayonx,m_rayony;

@@ -14,7 +14,7 @@ void Polygon::sedessiner()
     if(monFlux)
     {
         monFlux.seekp(0,std::ios::end);
-        monFlux<<" \n<polygon points=\" ";  // On va se placer à la fin puis ecrit la div du polygon
+        monFlux<<"\n<polygon points=\" ";  // On va se placer à la fin puis ecrit la div du polygon
 
         for(unsigned int i=0;i<m_coords.size();i++)
         {
@@ -22,13 +22,12 @@ void Polygon::sedessiner()
         }
         monFlux<<"\"";
         monFlux<<" fill=\" "<<m_couleur<<"\" ";
-        monFlux<<" /> \n";       // On ferme la div du polygon
+        monFlux<<"/>";       // On ferme la div du polygon
     }
     else
     {
         std::cout<<"ERREUR: Impossible d'ouvrir le fichier.\n";
     }
-    monFlux<<"Dsl ce navigateur ne supporte pas svg\n</svg>"; // On ferme la div du svg
 }
 
 void Polygon::addPoint(Coords const & lacoord)

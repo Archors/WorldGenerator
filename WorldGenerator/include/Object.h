@@ -8,7 +8,7 @@ class Object
     public:
         Object(){};
         virtual ~Object(){};
-        virtual void medessiner()=0;
+        virtual void medessiner();
 
     protected:
         Coords m_barycentre;
