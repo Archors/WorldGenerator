@@ -3,20 +3,20 @@
 #include "Triangle.h"
 #include "Polygon.h"
 #include "Plan.h"
+#include "Arbre.h"
+#include "Object.h"
 
 using namespace std;
 
 // IMPORTANT : effacer à chaque fois le fin de div de l'objet et le </svg> avant de compiler
 int main()
 {
-    vector <Figure*> test;
-    test.push_back(new Triangle(Coords(200,10),Coords(190,250),Coords(160,210),Couleur(65,134,18)));
-    test.push_back(new Polygon(Coords(15,15),Couleur(255,0,0)));
+    vector <Object*> test;
 
-    Polygon recip(Couleur(255,0,0));
-    recip.addPoint(Coords(5,5));
+    test.push_back(new Arbre(Coords(50,50),100));
 
-    //test[0]->sedessiner();
+    test[0]->medessiner();
+
     for(unsigned int i=0;i<test.size();i++)
     {
         delete test[i];

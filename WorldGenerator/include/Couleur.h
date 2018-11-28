@@ -2,6 +2,8 @@
 #define COULEUR_H
 #include <iostream>
 
+/// lien utile :
+/// https://www.toutes-les-couleurs.com/code-couleur-rvb.php
 class Couleur
 {
     public:
