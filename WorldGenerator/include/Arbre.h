@@ -14,11 +14,12 @@ class Arbre : public Object
 {
     public:
         Arbre(){};
+        Arbre(Coords const & lacoord,int taille);
         virtual ~Arbre(){};
         virtual void medessiner();
 
     protected:
-        std::vector <Rectangle> m_rectangle;
+        std::vector <Polygon> m_polygon;
         std::vector <Ellipse> m_ellipse;
 
     private:

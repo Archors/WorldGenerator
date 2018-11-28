@@ -30,3 +30,9 @@ void Polygon::sedessiner()
     }
     monFlux<<"Dsl ce navigateur ne supporte pas svg\n</svg>"; // On ferme la div du svg
 }
+
+void Polygon::addPoint(Coords const & lacoord)
+{
+    m_coords.push_back(Coords(lacoord));
+
+}

@@ -9,6 +9,7 @@ class Figure
     public:
         Figure(){};
         Figure(Coords bary,Couleur coul):m_barycentre(bary),m_couleur(coul){};
+        Figure(Couleur coul):m_couleur(coul){};
         virtual ~Figure(){};
         virtual void sedessiner()=0;
 

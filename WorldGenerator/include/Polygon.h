@@ -10,8 +10,10 @@ class Polygon : public Figure
     public:
         Polygon(){};
         Polygon(Coords bary,Couleur coul):Figure(bary,coul){};
+        Polygon(Couleur lacoul):Figure(lacoul){};
         virtual ~Polygon(){};
         virtual void sedessiner();
+        void addPoint(Coords const & lacoord);
 
     protected:
         std::vector <Coords> m_coords;
