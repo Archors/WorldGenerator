@@ -12,6 +12,7 @@ class Object
 
     protected:
         Coords m_barycentre;
+        double m_taille;
 
     private:
 };
