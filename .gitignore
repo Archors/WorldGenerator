@@ -1,5 +1,7 @@
 *.layout
 *.depend
 *.cbp
+WorldGenerator.layout
 bin/
 obj/
+output.svg
