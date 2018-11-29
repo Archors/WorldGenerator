@@ -6,6 +6,7 @@ Arbre::Arbre(Coords const & lacoord,double taille,std::mt19937 laseed)
     m_taille=taille;
     m_seed=laseed;
 
+    /// CREATION DU TRONC
     Polygon recip(Coords(m_barycentre),Couleur(91,60,17));/// On creer un recip qui va ensuite etre push_back
     /// Les attribut de Polygon ne sont pas accesible dans Arbre
     /// On doit donc creer un recip, ajouter les attribut du recip, et APRÈS le push_back dans l'objet
@@ -21,7 +22,45 @@ Arbre::Arbre(Coords const & lacoord,double taille,std::mt19937 laseed)
 
     ///Meme chose avec l'ellipse, elle est plus facile car elle n'a pas de conteneurs donc accede à tout directement
 
-    m_ellipse.push_back(Ellipse(Coords(m_barycentre.getx(),m_barycentre.gety()-m_taille/2),Couleur(27,79,8),100,50));
+    m_ellipse.push_back(Ellipse(Coords(m_barycentre.getx(),m_barycentre.gety()-m_taille/2),Couleur(27,79,8),m_taille/3,m_taille/5));
+    /// CREATION D'UNE BRANCHE ///////////////////////////////////
+
+    double possible=alea(0,1,m_seed);
+    if(possible)
+    {
+        double x,y;
+
+        x=m_barycentre.getx()+m_taille/5;
+        y=m_barycentre.gety()+alea(-m_taille/3,m_taille/6,m_seed);
+
+        Polygon autre(Coords(x+m_taille/8,y+alea(-m_taille/2,0,m_seed)),Couleur(91,60,17));
+        autre.addPoint(Coords(x+m_taille/10,y-m_taille/18));
+        autre.addPoint(Coords(x+m_taille/8,y-m_taille/18));
+        autre.addPoint(Coords(x-m_taille/8,y+m_taille/18));
+        autre.addPoint(Coords(x-m_taille/5,y+m_taille/18));
+
+        m_polygon.push_back(autre);
+        m_ellipse.push_back(Ellipse(Coords((((x+m_taille/10)+(x+m_taille/8))/2),y-m_taille/18),Couleur(27,79,8),m_taille/6,m_taille/10));
+    }
+
+    possible=alea(0,1,m_seed);
+
+    if(possible)
+    {
+        double a,b;
+        a=m_barycentre.getx()-m_taille/5;
+        b=m_barycentre.gety()+alea(-m_taille/3,m_taille/6,m_seed);
+
+        Polygon autre(Coords(a+m_taille/8,b+alea(-m_taille/2,0,m_seed)),Couleur(91,60,17));
+        autre.addPoint(Coords(a-m_taille/10,b-m_taille/18));
+        autre.addPoint(Coords(a-m_taille/8,b-m_taille/18));
+        autre.addPoint(Coords(a+m_taille/8,b+m_taille/18));
+        autre.addPoint(Coords(a+m_taille/5,b+m_taille/18));
+
+        m_polygon.push_back(autre);
+        m_ellipse.push_back(Ellipse(Coords((((a-m_taille/10)+(a-m_taille/8))/2),b-m_taille/18),Couleur(27,79,8),m_taille/6,m_taille/10));
+
+    }
 
 }
 

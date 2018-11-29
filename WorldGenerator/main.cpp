@@ -11,9 +11,11 @@ using namespace std;
 int main()
 {
     vector <Object*> test;
-    //test.push_back(new Arbre(Coords(100,100),300));
-    //test[0]->medessiner();
-    //test[0]->sedessiner();
+    mt19937 laseed(0);
+
+    test.push_back(new Arbre(Coords(100,500),200,laseed));
+    test[0]->medessiner();
+
     for(unsigned int i=0;i<test.size();i++)
     {
         delete test[i];
