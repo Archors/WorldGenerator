@@ -13,12 +13,14 @@ public:
     void choixseed();
     void choixdensite();
     void choixtaille();
+    void medessiner();
 
 protected:
-    std::vector<Plan> lesplans;
-    int m_seed;
-    int m_densite;
-    int m_taille;
+    std::vector<Plan> m_plan;
+    unsigned int m_seed;
+    unsigned int m_densite;
+    unsigned int m_taille;
+    unsigned int m_nbplan;
 private:
 };
 

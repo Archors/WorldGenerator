@@ -32,3 +32,9 @@ void Paysage::choixtaille()
         std::cin>>m_taille;
     }while(m_taille < 0 || m_taille > 10);
 }
+
+void Paysage::medessiner()
+{
+    for(unsigned int i=0;i<m_plan.size();++i)
+        m_plan[i].medessiner();
+}

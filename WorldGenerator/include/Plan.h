@@ -1,8 +1,8 @@
 #ifndef PLAN_H
 #define PLAN_H
 #include <vector>
+#include "Plan.h"
 #include "Object.h"
-#include "Arbre.h"
 
 class Plan
 {
@@ -10,7 +10,8 @@ class Plan
         Plan();
         virtual ~Plan();
         void medessiner();
-        void addarbre(Arbre* Thearbre);
+        //void addArbre(Arbre *Thearbre);
+        //void addNuage(Nuage *Thenuage);
 
     protected:
         ///Liste polymorphique des objets contenu dans un plan
