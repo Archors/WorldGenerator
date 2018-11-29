@@ -2,6 +2,7 @@
 #define FIGURE_H
 #include "Coords.h"
 #include "Couleur.h"
+#include "random"
 
 
 class Figure

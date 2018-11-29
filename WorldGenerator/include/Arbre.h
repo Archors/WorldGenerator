@@ -5,6 +5,8 @@
 #include "Rectangle.h"
 #include "Ellipse.h"
 #include "Object.h"
+#include <random>
+#include "Seed.h"
 
 // Composite Design pour eviter l'heritage diamant mais on aurrait pu utiliser de l'heritage vituel
 // FAUX ! On a un vecteur de polygon et d'elipse donc l'heritage virtuel ne peut pas creer l'objet
@@ -15,7 +17,7 @@ class Arbre : public Object
 {
     public:
         Arbre(){};
-        Arbre(Coords const & lacoord,double taille);
+        Arbre(Coords const & lacoord,double taille,std::mt19937 laseed);
         virtual ~Arbre(){};
         virtual void medessiner();
 
