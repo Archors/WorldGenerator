@@ -3,6 +3,7 @@
 #include "Triangle.h"
 #include "Polygon.h"
 #include "Plan.h"
+#include "Arbre.h"
 
 using namespace std;
 
@@ -10,14 +11,10 @@ using namespace std;
 int main()
 {
     vector <Plan> image;
-    image.push_back(new Arbre(lacoord))
-    vector <Figure*> test;
-    test.push_back(new Triangle(Coords(200,10),Coords(190,250),Coords(160,210),Couleur(65,134,18)));
-    test.push_back(new Polygon(Coords(15,15),Couleur(255,0,0)));
-
-    Polygon recip(Couleur(255,0,0));
-    recip.addPoint(Coords(5,5));
-
+    //image.push_back(new Arbre(lacoord))
+    vector <Object*> test;
+    test.push_back(new Arbre(Coords(100,100),300));
+    test[0]->medessiner();
     //test[0]->sedessiner();
     for(unsigned int i=0;i<test.size();i++)
     {
