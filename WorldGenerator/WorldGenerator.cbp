@@ -35,7 +35,6 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="Seed.cpp" />
-		<Unit filename="Seed.h" />
 		<Unit filename="include/Arbre.h" />
 		<Unit filename="include/Coords.h" />
 		<Unit filename="include/Couleur.h" />
@@ -44,9 +43,11 @@
 		<Unit filename="include/Figure.h" />
 		<Unit filename="include/Nuage.h" />
 		<Unit filename="include/Object.h" />
+		<Unit filename="include/Paysage.h" />
 		<Unit filename="include/Plan.h" />
 		<Unit filename="include/Polygon.h" />
 		<Unit filename="include/Rectangle.h" />
+		<Unit filename="include/Seed.h" />
 		<Unit filename="include/Triangle.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Arbre.cpp" />
@@ -57,6 +58,7 @@
 		<Unit filename="src/Figure.cpp" />
 		<Unit filename="src/Nuage.cpp" />
 		<Unit filename="src/Object.cpp" />
+		<Unit filename="src/Paysage.cpp" />
 		<Unit filename="src/Plan.cpp" />
 		<Unit filename="src/Polygon.cpp" />
 		<Unit filename="src/Rectangle.cpp" />

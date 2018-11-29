@@ -11,7 +11,6 @@ using namespace std;
 int main()
 {
     vector <Plan> image;
-    //image.push_back(new Arbre(lacoord))
     vector <Object*> test;
     test.push_back(new Arbre(Coords(100,100),300));
     test[0]->medessiner();
