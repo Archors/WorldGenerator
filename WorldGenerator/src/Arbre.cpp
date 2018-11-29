@@ -1,5 +1,6 @@
 #include "Arbre.h"
 
+
 Arbre::Arbre(Coords const & lacoord,double taille)
 {
     m_barycentre=lacoord;/// On met le barycentre la taille dans l'objet

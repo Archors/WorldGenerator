@@ -1,8 +1,9 @@
 *.layout
 *.depend
 *.cbp
+WorldGenerator.cbp
 WorldGenerator.layout
 bin/
 obj/
-output.svg
 WorldGenerator.exe
+debug/
