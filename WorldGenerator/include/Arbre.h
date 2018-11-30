@@ -17,7 +17,8 @@ class Arbre : public Object
 {
     public:
         Arbre(){};
-        Arbre(Coords const & lacoord,double taille,std::mt19937 laseed);
+        Arbre(Coords const & lacoord,double taille,double generator);
+        ///  m_coord est le barycentre, m_taille la taille globale, generator est la valeur pour creer une seed propre à l'arbre
         virtual ~Arbre(){};
         virtual void medessiner();
 

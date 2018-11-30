@@ -2,9 +2,7 @@
 #include <vector>
 #include "Triangle.h"
 #include "Polygon.h"
-#include "Plan.h"
 #include "Arbre.h"
-#include "Paysage.h"
 
 using namespace std;
 
@@ -16,10 +14,13 @@ int main()
     thepaysage.createplan();
     thepaysage.medessiner();*/
     vector <Object*> test;
-    mt19937 laseed(0);
+    mt19937 laseed(2);
 
-    test.push_back(new Arbre(Coords(100,500),100,laseed));
-    test[0]->medessiner();
+    for(int i=0;i<5;i++)
+    {
+        test.push_back(new Arbre(Coords(100+100*i,500),100,alea(0,50,laseed)));
+        test[i]->medessiner();
+    }
 
     for(unsigned int i=0; i<test.size(); i++)
     {

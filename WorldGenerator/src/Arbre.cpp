@@ -1,10 +1,10 @@
 #include "Arbre.h"
 
-Arbre::Arbre(Coords const & lacoord,double taille,std::mt19937 laseed)
+Arbre::Arbre(Coords const & lacoord,double taille,double generator)
 {
     m_barycentre=lacoord;/// On met le barycentre la taille dans l'objet
     m_taille=taille;
-    m_seed=laseed;
+    m_seed=std::mt19937(generator);
 
     /// CREATION DU TRONC
     Polygon recip(Coords(m_barycentre),Couleur(91,60,17));/// On creer un recip qui va ensuite etre push_back
@@ -76,5 +76,5 @@ void Arbre::medessiner()
     {
         m_ellipse[i].sedessiner();
     }
-    Object::medessiner();
+    //Object::medessiner();
 }

@@ -15,15 +15,16 @@ void Plan::medessiner()
         m_objet[i]->medessiner();
 }
 
+
 void Plan::createArbre()
 {
-    m_objet.push_back(new Arbre(Coords(alea(0,TAILLEX,m_seed),alea(m_min,m_max,m_seed)),m_taille,m_seed));
+//    m_objet.push_back(new Arbre(Coords(alea(0,TAILLEX,m_seed),alea(m_min,m_max,m_seed)),m_taille,m_seed));
 }
 
-/*void Plan::createNuage()
+void Plan::createNuage()
 {
-    m_objet.push_back(new Nuage(Coords(alea(0,TAILLEX,m_seed),alea(m_min,m_max,m_seed)),m_taille,m_seed));
-}*/
+//    m_objet.push_back(new Nuage(Coords(alea(0,TAILLEX,m_seed),alea(m_min,m_max,m_seed)),m_taille,m_seed));
+}
 
 void Plan::createListArbre()
 {
@@ -31,8 +32,8 @@ void Plan::createListArbre()
         createArbre();
 }
 
-/*void Plan::createListNuage()
+void Plan::createListNuage()
 {
     for(int i=0; i < m_densite*2; i++)
         createNuage();
-}*/
+}
