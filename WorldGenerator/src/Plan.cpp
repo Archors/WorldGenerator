@@ -18,10 +18,10 @@ void Plan::medessiner()
 }
 
 
-/*void Plan::addArbre(Arbre *Thearbre)
+void Plan::addArbre(Arbre *Thearbre)
 {
     m_objet.push_back(Thearbre);
-}*/
+}
 
 /*void Plan::addNuage(Nuage* Thenuage)
 {

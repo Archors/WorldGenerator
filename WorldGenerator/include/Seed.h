@@ -3,7 +3,6 @@
 #include <iostream>
 #include <vector>
 #include <random>
-#include "Plan.h"
 
 
 double alea(double min, double max, std::mt19937& randGen);
