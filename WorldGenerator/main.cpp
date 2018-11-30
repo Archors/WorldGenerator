@@ -3,6 +3,7 @@
 #include "Triangle.h"
 #include "Polygon.h"
 #include "Arbre.h"
+#include "Nuage.h"
 
 using namespace std;
 
@@ -14,11 +15,19 @@ int main()
     thepaysage.createplan();
     thepaysage.medessiner();*/
     vector <Object*> test;
-    mt19937 laseed(2);
+    mt19937 laseed(0);
+
 
     for(int i=0;i<5;i++)
+    for(int j=0;j<5;j++)
     {
-        test.push_back(new Arbre(Coords(100+100*i,500),100,alea(0,50,laseed)));
+        test.push_back(new Nuage(Coords(100+100*i,100+100*j),50,alea(0,50,laseed)));
+    }
+
+    //test.push_back(new Nuage(Coords(100,100),50,alea(0,50,laseed)));
+
+    for (unsigned int i=0;i<test.size();i++)
+    {
         test[i]->medessiner();
     }
 

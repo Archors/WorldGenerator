@@ -1,14 +1,19 @@
 #ifndef NUAGE_H
 #define NUAGE_H
 #include "Object.h"
+#include "Ellipse.h"
 
 class Nuage : public Object
 {
     public:
-        Nuage();
-        virtual ~Nuage();
+        Nuage(){};
+        Nuage(Coords const & lacoord,double taille,double generator);
+        virtual ~Nuage(){};
+        virtual void medessiner();
 
     protected:
+
+        std::vector <Ellipse> m_ellipse;
 
     private:
 };

@@ -1,15 +1,11 @@
 #include "Arbre.h"
 
-Arbre::Arbre(Coords const & lacoord,double taille,double generator)
+Arbre::Arbre(Coords const & lacoord,double taille,double generator):Object(lacoord,taille,generator)
 {
-    m_barycentre=lacoord;/// On met le barycentre la taille dans l'objet
-    m_taille=taille;
-    m_seed=std::mt19937(generator);
-
     /// CREATION DU TRONC
     Polygon recip(Coords(m_barycentre),Couleur(91,60,17));/// On creer un recip qui va ensuite etre push_back
     /// Les attribut de Polygon ne sont pas accesible dans Arbre
-    /// On doit donc creer un recip, ajouter les attribut du recip, et APRÈS le push_back dans l'objet
+    /// On doit donc creer un polygon, bien former le polygon, et APRÈS le push_back dans l'objet
 
     recip.addPoint(Coords(m_barycentre.getx()-m_taille/10,m_barycentre.gety()+m_taille/2));/// tout ça c'est les coords d'un rectangle
     recip.addPoint(Coords(m_barycentre.getx(),m_barycentre.gety()+m_taille/2+m_taille/15));
@@ -20,12 +16,13 @@ Arbre::Arbre(Coords const & lacoord,double taille,double generator)
     m_polygon.push_back(recip);/// Dès que le rectangle est bien on le push dans l'objet
     /// Il sera detruit par default
 
-    ///Meme chose avec l'ellipse, elle est plus facile car elle n'a pas de conteneurs donc accede à tout directement
+    ///Meme chose avec l'ellipse, elle est plus facile car elle n'a pas de conteneurs de Coord
+    ///donc la créee directement grâce au constructeur
 
     m_ellipse.push_back(Ellipse(Coords(m_barycentre.getx(),m_barycentre.gety()-m_taille/2),Couleur(27,79,8),m_taille/3,m_taille/5));
     /// CREATION D'UNE BRANCHE ///////////////////////////////////
 
-    double possible=alea(0,1,m_seed);
+    int possible=aleaentier(0,4,m_seed);
     if(possible)
     {
         double x,y;
@@ -43,7 +40,7 @@ Arbre::Arbre(Coords const & lacoord,double taille,double generator)
         m_ellipse.push_back(Ellipse(Coords((((x+m_taille/10)+(x+m_taille/8))/2),y-m_taille/18),Couleur(27,79,8),m_taille/6,m_taille/10));
     }
 
-    possible=alea(0,1,m_seed);
+    possible=aleaentier(0,4,m_seed);
 
     if(possible)
     {

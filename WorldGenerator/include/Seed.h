@@ -6,5 +6,6 @@
 
 
 double alea(double min, double max, std::mt19937& randGen);
+int aleaentier(double min,double max,std::mt19937 & graine);
 
 #endif // SEED_H_INCLUDED

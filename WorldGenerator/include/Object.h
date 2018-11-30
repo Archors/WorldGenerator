@@ -3,11 +3,13 @@
 #include <iostream>
 #include "Coords.h"
 #include <random>
+#include "Seed.h"
 
 class Object
 {
     public:
         Object(){};
+        Object(Coords const & lacoord,double taille,double generator);
         virtual ~Object(){};
         virtual void medessiner();
 
