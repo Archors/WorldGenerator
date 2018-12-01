@@ -97,5 +97,5 @@ void Plan::trierObjet()
 
 void Plan::drawEllipse
 {
-    Ellipse theellipse()
+    Ellipse *theelispe
 }
