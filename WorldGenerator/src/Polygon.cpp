@@ -21,7 +21,7 @@ void Polygon::sedessiner()
         monFlux<<m_coords[i]<<" ";    // On affiche les coordonnées les une à la suite des autres
         }
         monFlux<<"\"";
-        monFlux<<" fill=\" "<<m_couleur<<"\" ";
+        monFlux<<" style=\"fill:"<<m_couleur<<"\"";
         monFlux<<"/>";       // On ferme la div du polygon
     }
     else

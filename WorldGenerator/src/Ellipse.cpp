@@ -11,7 +11,7 @@ void Ellipse::sedessiner()
     if(monFlux)
     {
         monFlux.seekp(0,std::ios::end);
-        monFlux<<"\n<ellipse cx=\""<<m_barycentre.getx()<<"\" cy=\""<<m_barycentre.gety()<<"\" rx=\""<<m_rayonx<<"\" ry=\""<<m_rayony<<"\" fill=\""<<m_couleur<<"\" />";
+        monFlux<<"\n<ellipse cx=\""<<m_barycentre.getx()<<"\" cy=\""<<m_barycentre.gety()<<"\" rx=\""<<m_rayonx<<"\" ry=\""<<m_rayony<<"\" style=\"fill:"<<m_couleur<<";stroke:black;stroke-width:1\" />";
     }
     else
     {
