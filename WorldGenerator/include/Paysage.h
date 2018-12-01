@@ -9,13 +9,8 @@
 class Paysage
 {
 public:
-    Paysage();
+    Paysage(double seed, double taille, double densite);
     virtual ~Paysage();
-    ///Choix des parametres utilisateur
-    void choix();
-    void choixseed();
-    void choixdensite();
-    void choixtaille();
     ///Fonction pour dessiner
     void medessiner();
     ///Permet de créer 4 plans differents pour l'image

@@ -18,21 +18,20 @@ void Plan::medessiner()
 }
 
 
-void Plan::createArbre()
+ void Plan::createArbre(double x,double y)
 {
-    double y = alea(m_min,m_max,m_seed);
     double taille = ((m_taille*y)/700) + alea(0,10,m_seed);
-    m_objet.push_back(new Arbre(Coords(alea(0,TAILLEX,m_seed),y),taille,alea(0,50,m_seed)));
+    m_objet.push_back(new Arbre(Coords(x,y),taille,alea(0,50,m_seed)));
 }
 
 void Plan::createNuage()
 {
-    m_objet.push_back(new Nuage(Coords(alea(0,1000,m_seed),alea(m_min,m_max,m_seed)),m_taille,alea(0,50,m_seed)));
+    m_objet.push_back(new Nuage(Coords(alea(0,TAILLEX,m_seed),alea(m_min,m_max,m_seed)),m_taille,alea(0,50,m_seed)));
 }
 
 void Plan::createEtoile()
 {
-    m_objet.push_back(new Etoile(Coords(alea(0,1000,m_seed),alea(m_min,m_max,m_seed)),m_taille,alea(0,50,m_seed)));
+    m_objet.push_back(new Etoile(Coords(alea(0,TAILLEX,m_seed),alea(m_min,m_max,m_seed)),m_taille,alea(0,50,m_seed)));
 }
 
 void Plan::createListArbre()
@@ -41,30 +40,45 @@ void Plan::createListArbre()
     bool test=false;
     for(int i=0; i < 3*m_densite; i++)
     {
-        do{
-        x = alea(0,TAILLEX,m_seed);
-        y = alea(m_min,m_max,m_seed);
-        for(int j=0;j<i-1;++j)
+        do
         {
-            if((x < m_objet[j]->getx()+30) && (x > m_objet[j]->getx()-30) && (y < m_objet[j]->gety()+30) && (y > m_objet[j]->gety()-30))
+            x = alea(0,TAILLEX,m_seed);
+            y = alea(m_min,m_max,m_seed);
+            for(int j=0; j<i-1; ++j)
             {
-                test=false;
-                break;
+                if((x < m_objet[j]->getx()+(m_taille/3)) && (x > m_objet[j]->getx()-(m_taille/3)) && (y < m_objet[j]->gety()+(m_taille/3)) && (y > m_objet[j]->gety()-m_taille/3))
+                {
+                    test=false;
+                    break;
+                }
+                test=true;
             }
+            if(i==0 || i==1 )
+                test=true;
         }
-        test=true;
-        }while(!test);
+        while(!test);
         test=false;
-        createArbre();
+        createArbre(x,y);
     }
     trierObjet();
 }
 
 void Plan::createListNuage()
 {
-    for(int i=0; i < m_densite; i++)
+    for(int i=m_densite/2; i < m_densite; i++)
         createNuage();
-    trierObjet();
+}
+
+void Plan::createListEtoile()
+{
+    for(int i=0; i < m_densite/2; i++)
+        createEtoile();
+}
+
+void Plan::createCiel()
+{
+    createListEtoile();
+    createListNuage();
 }
 
 void Plan::trierObjet()
