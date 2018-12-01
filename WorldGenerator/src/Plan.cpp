@@ -30,8 +30,26 @@ void Plan::createNuage()
 
 void Plan::createListArbre()
 {
+    double x,y;
+    bool test=false;
     for(int i=0; i < 3*m_densite; i++)
+    {
+        do{
+        x = alea(0,TAILLEX,m_seed);
+        y = alea(m_min,m_max,m_seed);
+        for(int j=0;j<i-1;++j)
+        {
+            if((x < m_objet[j]->getx()+30) && (x > m_objet[j]->getx()-30) && (y < m_objet[j]->gety()+30) && (y > m_objet[j]->gety()-30))
+            {
+                test=false;
+                break;
+            }
+        }
+        test=true;
+        }while(!test);
+        test=false;
         createArbre();
+    }
     trierObjet();
 }
 
@@ -39,15 +57,15 @@ void Plan::createListNuage()
 {
     for(int i=0; i < m_densite; i++)
         createNuage();
-        trierObjet();
+    trierObjet();
 }
 
 void Plan::trierObjet()
 {
     Object *tempo;
-    for(unsigned int i=0;i<m_objet.size()-1;++i)
+    for(unsigned int i=0; i<m_objet.size()-1; ++i)
     {
-        for(unsigned int j=0;j<m_objet.size()-i-1;++j)
+        for(unsigned int j=0; j<m_objet.size()-i-1; ++j)
             if(m_objet[j]->gety() > m_objet[j+1]->gety())
             {
                 tempo=m_objet[j];
