@@ -32,10 +32,27 @@ void Plan::createListArbre()
 {
     for(int i=0; i < 3*m_densite; i++)
         createArbre();
+    trierObjet();
 }
 
 void Plan::createListNuage()
 {
     for(int i=0; i < m_densite; i++)
         createNuage();
+        trierObjet();
+}
+
+void Plan::trierObjet()
+{
+    Object *tempo;
+    for(unsigned int i=0;i<m_objet.size()-1;++i)
+    {
+        for(unsigned int j=0;j<m_objet.size()-i-1;++j)
+            if(m_objet[j]->gety() > m_objet[j+1]->gety())
+            {
+                tempo=m_objet[j];
+                m_objet[j]=m_objet[j+1];
+                m_objet[j+1]=tempo;
+            }
+    }
 }

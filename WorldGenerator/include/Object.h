@@ -10,6 +10,7 @@ class Object
     public:
         Object(){};
         Object(Coords const & lacoord,double taille,double generator);
+        double gety(){return m_barycentre.gety();};
         virtual ~Object(){};
         virtual void medessiner();
 

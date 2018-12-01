@@ -17,6 +17,7 @@ class Plan
         void medessiner();
         void createArbre();
         void createNuage();
+        void trierObjet();
         void createListArbre();
         void createListNuage();
 
