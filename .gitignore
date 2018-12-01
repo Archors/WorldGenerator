@@ -9,3 +9,4 @@ WorldGenerator.exe
 debug/
 main.o
 output.svg
+WorldGenerator/output.svg

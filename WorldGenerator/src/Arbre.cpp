@@ -3,6 +3,23 @@
 Arbre::Arbre(Coords const & lacoord,double taille,double generator):Object(lacoord,taille,generator)
 {
     /// CREATION DU TRONC
+
+    int a,b,c;
+    if(!aleaentier(0,3,m_seed))
+    {
+        a=56;b=111;c=62;
+    }
+    else if(aleaentier(0,3,m_seed)==1)
+    {
+        a=20;b=148;c=20;
+    }
+    else
+    {
+        a=0;b=86;c=27;
+    }
+
+    Couleur recipient(a,b,c);
+
     Polygon recip(Coords(m_barycentre),Couleur(91,60,17));/// On creer un recip qui va ensuite etre push_back
     /// Les attribut de Polygon ne sont pas accesible dans Arbre
     /// On doit donc creer un polygon, bien former le polygon, et APRÈS le push_back dans l'objet
@@ -19,7 +36,7 @@ Arbre::Arbre(Coords const & lacoord,double taille,double generator):Object(lacoo
     ///Meme chose avec l'ellipse, elle est plus facile car elle n'a pas de conteneurs de Coord
     ///donc la créee directement grâce au constructeur
 
-    m_ellipse.push_back(Ellipse(Coords(m_barycentre.getx(),m_barycentre.gety()-m_taille/2),Couleur(27,79,8),m_taille/3,m_taille/5));
+    m_ellipse.push_back(Ellipse(Coords(m_barycentre.getx(),m_barycentre.gety()-m_taille/2),recipient,m_taille/3,m_taille/5));
     /// CREATION D'UNE BRANCHE ///////////////////////////////////
 
     int possible=aleaentier(0,4,m_seed);
@@ -37,7 +54,7 @@ Arbre::Arbre(Coords const & lacoord,double taille,double generator):Object(lacoo
         autre.addPoint(Coords(x-m_taille/5,y+m_taille/18));
 
         m_polygon.push_back(autre);
-        m_ellipse.push_back(Ellipse(Coords((((x+m_taille/10)+(x+m_taille/8))/2),y-m_taille/18),Couleur(27,79,8),m_taille/6,m_taille/10));
+        m_ellipse.push_back(Ellipse(Coords((((x+m_taille/10)+(x+m_taille/8))/2),y-m_taille/18),recipient,m_taille/6,m_taille/10));
     }
 
     possible=aleaentier(0,4,m_seed);
@@ -55,7 +72,7 @@ Arbre::Arbre(Coords const & lacoord,double taille,double generator):Object(lacoo
         autre.addPoint(Coords(a+m_taille/5,b+m_taille/18));
 
         m_polygon.push_back(autre);
-        m_ellipse.push_back(Ellipse(Coords((((a-m_taille/10)+(a-m_taille/8))/2),b-m_taille/18),Couleur(27,79,8),m_taille/6,m_taille/10));
+        m_ellipse.push_back(Ellipse(Coords((((a-m_taille/10)+(a-m_taille/8))/2),b-m_taille/18),recipient,m_taille/6,m_taille/10));
 
     }
 
