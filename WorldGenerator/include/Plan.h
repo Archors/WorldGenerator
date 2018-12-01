@@ -7,8 +7,6 @@
 #define TAILLEX 1000
 #define TAILLEY 800
 
-
-
 class Plan
 {
     public:
