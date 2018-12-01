@@ -17,7 +17,6 @@ void Plan::medessiner()
     }
 }
 
-
  void Plan::createArbre(double x,double y)
 {
     double taille = ((m_taille*y)/700) + alea(0,10,m_seed);
@@ -94,4 +93,9 @@ void Plan::trierObjet()
                 m_objet[j+1]=tempo;
             }
     }
+}
+
+void Plan::drawEllipse
+{
+    Ellipse theellipse()
 }

@@ -5,6 +5,7 @@
 #include "Nuage.h"
 #include "Etoile.h"
 #include "Coords.h"
+#include "Ellipse.h"
 #define TAILLEX 1000
 #define TAILLEY 800
 
@@ -22,6 +23,7 @@ class Plan
         void createListNuage();
         void createListEtoile();
         void createCiel();
+        void drawEllipse();
 
     protected:
         ///Liste polymorphique des objets contenu dans un plan
