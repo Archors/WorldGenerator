@@ -95,7 +95,9 @@ void Plan::trierObjet()
     }
 }
 
+/*
 void Plan::drawEllipse
 {
     Ellipse *theelispe
 }
+*/
