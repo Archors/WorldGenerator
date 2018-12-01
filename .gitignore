@@ -7,3 +7,5 @@ bin/
 obj/
 WorldGenerator.exe
 debug/
+main.o
+output.svg

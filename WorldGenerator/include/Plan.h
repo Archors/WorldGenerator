@@ -14,12 +14,14 @@ class Plan
         Plan(double densite, double taille,std::mt19937 laseed, int min, int max);
         virtual ~Plan();
         void medessiner();
-        void createArbre();
+        void createArbre(double x, double y);
         void createNuage();
         void createEtoile();
         void trierObjet();
         void createListArbre();
         void createListNuage();
+        void createListEtoile();
+        void createCiel();
 
     protected:
         ///Liste polymorphique des objets contenu dans un plan
