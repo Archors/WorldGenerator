@@ -36,6 +36,7 @@
 		</Compiler>
 		<Unit filename="Seed.cpp" />
 		<Unit filename="include/Arbre.h" />
+		<Unit filename="include/Bateau.h" />
 		<Unit filename="include/Coords.h" />
 		<Unit filename="include/Couleur.h" />
 		<Unit filename="include/Ellipse.h" />
@@ -44,14 +45,15 @@
 		<Unit filename="include/Nuage.h" />
 		<Unit filename="include/Object.h" />
 		<Unit filename="include/Paysage.h" />
-		<Unit filename="include/Plan.h">
-		</Unit>
+		<Unit filename="include/Plan.h" />
 		<Unit filename="include/Polygon.h" />
 		<Unit filename="include/Rectangle.h" />
 		<Unit filename="include/Seed.h" />
 		<Unit filename="include/Triangle.h" />
+		<Unit filename="include/Voiture.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Arbre.cpp" />
+		<Unit filename="src/Bateau.cpp" />
 		<Unit filename="src/Coords.cpp" />
 		<Unit filename="src/Couleur.cpp" />
 		<Unit filename="src/Ellipse.cpp" />
@@ -64,6 +66,7 @@
 		<Unit filename="src/Polygon.cpp" />
 		<Unit filename="src/Rectangle.cpp" />
 		<Unit filename="src/Triangle.cpp" />
+		<Unit filename="src/Voiture.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
