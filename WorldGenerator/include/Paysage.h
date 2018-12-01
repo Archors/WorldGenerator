@@ -3,6 +3,7 @@
 #include <iostream>
 #include <vector>
 #include <Plan.h>
+#include <fstream>
 
 
 class Paysage

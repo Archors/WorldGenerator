@@ -7,7 +7,6 @@ void Ellipse::sedessiner()
 
     std::cout<<"le barycentre :"<<m_barycentre<<std::endl<<m_couleur<<std::endl;//simple test
 
-    // On rajoute le "</svg>" à la fin pour fermer la div du svg, il faudras le changer pour le code d'après
     if(monFlux)
     {
         monFlux.seekp(0,std::ios::end);

@@ -54,8 +54,37 @@ void Paysage::choix()
 ///Dessine tous les objets
 void Paysage::medessiner()
 {
+    std::string const nomFichier("output.svg");
+    std::ofstream monFlux(nomFichier.c_str());//ouverture de fichier en ecriture, code identique à celui d'openclassroom
+
+    if(monFlux)
+    {
+        monFlux<<"<?xml version=\"1.0\" encoding=\"utf-8\"?>\n";
+        monFlux<<"<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" width=\""<<TAILLEX<<"\" height=\""<<TAILLEY<<"\">";
+
+        monFlux.close();
+    }
+    else
+    {
+        std::cout<<"\nERREUR : Pas de fichier "<<nomFichier<<std::endl;
+    }
+
     for(unsigned int i=0; i<m_plan.size(); ++i)
+    {
         m_plan[i]->medessiner();
+    }
+
+    monFlux.open(nomFichier,std::ios::app);
+
+    if(monFlux)
+    {
+        monFlux.seekp(0,std::ios::end);
+        monFlux<<"</svg>";
+    }
+    else
+    {
+        std::cout<<"\nERREUR : Plan.cpp l.25\nPas de fichier "<<nomFichier<<std::endl;
+    }
 }
 
 void Paysage::createplan()

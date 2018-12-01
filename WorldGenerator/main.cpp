@@ -12,12 +12,12 @@ using namespace std;
 // IMPORTANT : effacer à chaque fois le fin de div de l'objet et le </svg> avant de compiler
 int main()
 {
-    /*
+
     Paysage thepaysage;
     thepaysage.choix();
     thepaysage.createplan();
     thepaysage.medessiner();
-    */
+    /*
     vector <Object*> test;
     mt19937 laseed(0);
 
@@ -39,6 +39,7 @@ int main()
     {
         delete test[i];
     }
+    */
 
     return 0;
 }

@@ -13,7 +13,7 @@ class Object
         double getx(){return m_barycentre.getx();};
         double gety(){return m_barycentre.gety();};
         virtual ~Object(){};
-        virtual void medessiner();
+        virtual void medessiner()=0;
 
     protected:
         Coords m_barycentre;
