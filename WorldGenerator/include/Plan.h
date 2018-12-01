@@ -3,6 +3,7 @@
 #include <vector>
 #include "Arbre.h"
 #include "Nuage.h"
+#include "Etoile.h"
 #include "Coords.h"
 #define TAILLEX 1000
 #define TAILLEY 800
@@ -17,6 +18,7 @@ class Plan
         void medessiner();
         void createArbre();
         void createNuage();
+        void createEtoile();
         void trierObjet();
         void createListArbre();
         void createListNuage();

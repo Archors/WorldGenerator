@@ -25,7 +25,7 @@ int main()
     for(int i=0;i<5;i++)
     for(int j=0;j<5;j++)
     {
-        test.push_back(new Arbre(Coords(100+100*i,100+100*j),50,alea(0,50,laseed)));
+        test.push_back(new Etoile(Coords(100+100*i,100+100*j),50,alea(0,50,laseed)));
     }
 
     //test.push_back(new Etoile(Coords(100,300),50,alea(0,50,laseed)));
@@ -42,5 +42,6 @@ int main()
 
     return 0;
 }
+
 
 

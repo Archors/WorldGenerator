@@ -28,6 +28,11 @@ void Plan::createNuage()
     m_objet.push_back(new Nuage(Coords(alea(0,1000,m_seed),alea(m_min,m_max,m_seed)),m_taille,alea(0,50,m_seed)));
 }
 
+void Plan::createEtoile()
+{
+    m_objet.push_back(new Etoile(Coords(alea(0,1000,m_seed),alea(m_min,m_max,m_seed)),m_taille,alea(0,50,m_seed)));
+}
+
 void Plan::createListArbre()
 {
     double x,y;
