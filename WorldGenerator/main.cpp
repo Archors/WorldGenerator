@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <Paysage.h>
 #include "Triangle.h"
 #include "Polygon.h"
 #include "Arbre.h"
@@ -10,11 +11,11 @@ using namespace std;
 // IMPORTANT : effacer à chaque fois le fin de div de l'objet et le </svg> avant de compiler
 int main()
 {
-    /*Paysage thepaysage;
+    Paysage thepaysage;
     thepaysage.choix();
     thepaysage.createplan();
-    thepaysage.medessiner();*/
-    vector <Object*> test;
+    thepaysage.medessiner();
+    /*vector <Object*> test;
     mt19937 laseed(0);
 
 
@@ -34,8 +35,9 @@ int main()
     for(unsigned int i=0; i<test.size(); i++)
     {
         delete test[i];
-    }
+    }*/
 
     return 0;
 }
+
 
