@@ -1,6 +1,6 @@
 #include "Plan.h"
 
-Plan::Plan(double densite, double taille,double laseed, int themin, int themax) : m_densite(densite), m_taille(taille), m_seed1(laseed), m_min(themin), m_max(themax)
+Plan::Plan(double densite, double taille,double laseed, int themin, int themax, int choix) : m_densite(densite), m_taille(taille), m_seed1(laseed), m_min(themin), m_max(themax),m_choix(choix)
 {
     std::mt19937 seed{m_seed1};
     m_seed = seed;
@@ -14,9 +14,12 @@ Plan::~Plan()
 
 void Plan::medessiner()
 {
-    drawEllipse();
-    for(unsigned int i=0; i<m_objet.size(); ++i)
+    for(unsigned int i=0; i<m_objet.size(); i++)
     {
+        if(i==0 && m_choix==2)
+            drawCiel();
+        if(i==2 && m_choix==1)
+            drawSol();
         m_objet[i]->medessiner();
     }
 }
@@ -35,6 +38,16 @@ void Plan::createNuage()
 void Plan::createEtoile()
 {
     m_objet.push_back(new Etoile(Coords(alea(0,TAILLEX,m_seed),alea(m_min,m_max,m_seed)),m_taille/2,alea(0,50,m_seed)));
+}
+
+void Plan::createBateau()
+{
+    m_objet.push_back(new Bateau(Coords(alea(0,TAILLEX,m_seed),alea(m_min,m_max,m_seed)),m_taille,alea(0,50,m_seed)));
+}
+
+void Plan::createVoiture()
+{
+    m_objet.push_back(new Voiture(Coords(alea(0,TAILLEX,m_seed),alea(m_min,m_max,m_seed)),m_taille/3,alea(0,50,m_seed)));
 }
 
 void Plan::createListArbre()
@@ -84,6 +97,18 @@ void Plan::createCiel()
     createListNuage();
 }
 
+void Plan::createListVoiture()
+{
+    createVoiture();
+}
+
+void Plan::createListBateau()
+{
+    for(int i=0; i < m_densite/4; i++)
+    createBateau();
+    trierObjet();
+}
+
 void Plan::trierObjet()
 {
     Object *tempo;
@@ -99,10 +124,18 @@ void Plan::trierObjet()
     }
 }
 
-
-void Plan::drawEllipse()
+void Plan::drawSol()
 {
     Ellipse *theellispe = new Ellipse(Coords(500,2050),Couleur(127,221,76),1500,1700);
     theellispe->sedessiner();
+    delete theellispe;
 }
+
+void Plan::drawCiel()
+{
+    Ellipse *theellispe = new Ellipse(Coords(500,500),Couleur(0,191,255),1500,1700);
+    theellispe->sedessiner();
+    delete theellispe;
+}
+
 

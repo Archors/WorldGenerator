@@ -12,9 +12,9 @@ using namespace std;
 
 int main()
 {
-    /*
+
     int choix=0;
-    double seed=0,densite=30,taille=50;
+    double seed=0,densite=30,taille=70;
     while(choix != 5)
     {
         cout<<"Menu du generateur de monde\nQue souhaitez vous faire ?\n1.Choisir une seed\n2.Choisir la densite des objets\n3.Choisir la taille des objets\n4.Dessiner dans le fichier svg\n5.Quitter"<<endl;
@@ -64,9 +64,8 @@ int main()
         }
         }
     }
-    */
 
-    vector<Object*> test;
+    /*vector<Object*> test;
 
     mt19937 seed(0);
 
@@ -83,7 +82,7 @@ int main()
     for(unsigned int i=0;i<test.size();i++)
     {
         delete test[i];
-    }
+    }*/
 
     return 0;
 }

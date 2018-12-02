@@ -4,6 +4,7 @@
 #include <vector>
 #include <Plan.h>
 #include <fstream>
+#include "Ellipse.h"
 
 
 class Paysage

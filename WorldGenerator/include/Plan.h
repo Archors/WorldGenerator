@@ -4,26 +4,32 @@
 #include "Arbre.h"
 #include "Nuage.h"
 #include "Etoile.h"
+#include "Bateau.h"
+#include "Voiture.h"
 #include "Coords.h"
-#include "Ellipse.h"
 #define TAILLEX 1000
 #define TAILLEY 800
 
 class Plan
 {
 public:
-    Plan(double densite, double taille,double laseed, int min, int max);
+    Plan(double densite, double taille,double laseed, int min, int max,int choix);
     virtual ~Plan();
     void medessiner();
     void createArbre(double x, double y);
     void createNuage();
     void createEtoile();
+    void createBateau();
+    void createVoiture();
     void trierObjet();
     void createListArbre();
     void createListNuage();
     void createListEtoile();
+    void createListVoiture();
+    void createListBateau();
     void createCiel();
-    void drawEllipse();
+    void drawSol();
+    void drawCiel();
 
 protected:
     ///Liste polymorphique des objets contenu dans un plan
@@ -36,6 +42,7 @@ protected:
     ///Minimum et maximum des coordonnes de generation d'objet dans le plan
     int m_min;
     int m_max;
+    int m_choix;
 
 private:
 };
