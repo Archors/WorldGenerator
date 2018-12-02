@@ -9,7 +9,8 @@ class Couleur
 public:
     Couleur() {};
     Couleur(int rouge,int vert,int bleu):m_r(rouge),m_g(vert),m_b(bleu) {};
-    Couleur(Couleur const & copie);
+    Couleur(Couleur const & copie);/// Ne sers à rien, je sais plus pourquoi il est là
+    /// Au cas ou, je ne l'ellimine pas
     virtual ~Couleur() {};
 
     Couleur & operator=(Couleur const & a);

@@ -1,12 +1,10 @@
 #include <iostream>
-#include <vector>
 #include "Paysage.h"
-#include "Polygon.h"
-#include "Arbre.h"
-#include "Nuage.h"
-#include "Etoile.h"
-#include "Ellipse.h"
-#include "Bateau.h"
+
+/// Certains sous-programme ne figurent pas dans le diagramme de classe
+/// La raison est qu'ils ne servent à rien dans le code final
+/// Ils furents coder pour aider l'ecriture du code
+/// Il ne sont pas appelés dans cette version finale
 
 using namespace std;
 
