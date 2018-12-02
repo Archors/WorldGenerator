@@ -12,7 +12,7 @@ int main()
 {
 
     int choix=0;
-    double seed=0,densite=30,taille=70;
+    double seed=0,densite=30,taille=7;
     while(choix != 7)
     {
         cout<<"Menu du generateur de monde\nQue souhaitez vous faire ?\n1.Choisir une seed\n2.Choisir la densite des objets\n3.Choisir la taille des objets\n4.Dessiner dans le fichier svg\n";
@@ -28,12 +28,12 @@ int main()
         }
         case 2:
         {
-            cout<<"Saisissez la densite d'objet dans le monde entre 0 et 50\n0 = pas d'objet, 50 = maximum d'objet"<<endl;
+            cout<<"Saisissez la densite d'objet dans le monde entre 1 et 50\n, 50 = maximum d'objet"<<endl;
             do
             {
                 cin>>densite;
             }
-            while(densite > 50 || densite < 0);
+            while(densite > 50 || densite < 1);
             break;
         }
         case 3:

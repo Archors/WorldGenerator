@@ -87,7 +87,6 @@ void Paysage::charger()
         monFlux>>m_seed;
         monFlux>>m_densite;
         monFlux>>m_taille;
-        std::cout<<m_seed<<" "<<m_densite<<" "<<m_taille<<std::endl;
     }
     else
     {
