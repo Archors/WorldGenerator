@@ -2,9 +2,9 @@
 #define ARBRE_H
 #include <iostream>
 #include <vector>
-#include "Rectangle.h"
 #include "Ellipse.h"
 #include "Object.h"
+#include "Polygon.h"
 
 // Composite Design pour eviter l'heritage diamant mais on aurrait pu utiliser de l'heritage vituel
 // FAUX ! On a un vecteur de polygon et d'elipse donc l'heritage virtuel ne peut pas creer l'objet
