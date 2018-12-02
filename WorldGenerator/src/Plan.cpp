@@ -47,9 +47,9 @@ void Plan::createBateau()
     m_objet.push_back(new Bateau(Coords(alea(0,TAILLEX,m_seed),alea(m_min,m_max,m_seed)),m_taille,alea(0,50,m_seed)));
 }
 
-void Plan::createVoiture()
+void Plan::createVoiture(double x, double y)
 {
-    m_objet.push_back(new Voiture(Coords(alea(0,TAILLEX,m_seed),alea(m_min,m_max,m_seed)),m_taille/3,alea(0,50,m_seed)));
+    m_objet.push_back(new Voiture(Coords(x,y),m_taille/3,alea(0,50,m_seed)));
 }
 
 void Plan::createListArbre()
@@ -101,8 +101,31 @@ void Plan::createCiel()
 
 void Plan::createListVoiture()
 {
-    for(int i=0;i<m_densite/10;i++)
-    createVoiture();
+    double x,y;
+    bool test=false;
+    for(int i=0; i < m_densite/3; i++)
+    {
+        do
+        {
+            x = alea(0,TAILLEX,m_seed);
+            y = alea(m_min,m_max,m_seed);
+            for(int j=0; j<i-1; ++j)
+            {
+                if((x < m_objet[j]->getx()+((m_taille+20)/5)) && (x > m_objet[j]->getx()-((m_taille+20)/5)) && (y < m_objet[j]->gety()+((m_taille+20)/5)) && (y > m_objet[j]->gety()-(m_taille+20)/5))
+                {
+                    test=false;
+                    break;
+                }
+                test=true;
+            }
+            if(i==0 || i==1 )
+                test=true;
+        }
+        while(!test);
+        test=false;
+        createVoiture(x,y);
+    }
+    trierObjet();
 }
 
 void Plan::createListBateau()
@@ -143,12 +166,13 @@ void Plan::drawCiel()
 
 void Plan::drawMer()
 {
-    Polygon *thepolygon = new Polygon(Coords(0,0),Couleur(30,144,255));
+    Polygon *thepolygon = new Polygon(Coords(0,0),Couleur(0,0,255));
     thepolygon->addPoint(Coords(0,750));
     thepolygon->addPoint(Coords(0,800));
     thepolygon->addPoint(Coords(1000,800));
     thepolygon->addPoint(Coords(1000,750));
     thepolygon->sedessiner();
+    delete thepolygon;
 }
 
 

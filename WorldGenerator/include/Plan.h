@@ -20,7 +20,7 @@ public:
     void createNuage();
     void createEtoile();
     void createBateau();
-    void createVoiture();
+    void createVoiture(double x, double y);
     void trierObjet();
     void createListArbre();
     void createListNuage();

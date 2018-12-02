@@ -77,7 +77,6 @@ int main()
         case 7:
         {
             cout<<"Fermeture du programme"<<endl;
-            ///Mettre la sauvegarde ici
             break;
         }
         }
