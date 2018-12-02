@@ -7,15 +7,21 @@ Nuage::Nuage(Coords const & lacoord,double taille,double generator):Object(lacoo
 
     if(!aleaentier(0,3,m_seed))
     {
-        a=244;b=254;c=254;
+        a=244;
+        b=254;
+        c=254;
     }
     else if(aleaentier(0,3,m_seed)==1)
     {
-        a=142;b=162;c=198;
+        a=142;
+        b=162;
+        c=198;
     }
     else
     {
-        a=223;b=242;c=255;
+        a=223;
+        b=242;
+        c=255;
     }
 
     Couleur recipient(a,b,c);
@@ -39,6 +45,6 @@ Nuage::Nuage(Coords const & lacoord,double taille,double generator):Object(lacoo
 
 void Nuage::medessiner()
 {
-    for(unsigned int i=0;i<m_ellipse.size();i++)
-    m_ellipse[i].sedessiner();
+    for(unsigned int i=0; i<m_ellipse.size(); i++)
+        m_ellipse[i].sedessiner();
 }

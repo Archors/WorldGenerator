@@ -6,16 +6,16 @@
 
 class Etoile : public Object
 {
-    public:
-        Etoile(){};
-        Etoile(Coords const & lacoord,double taille,double generator);
-        virtual ~Etoile(){};
-        virtual void medessiner();
+public:
+    Etoile() {};
+    Etoile(Coords const & lacoord,double taille,double generator);
+    virtual ~Etoile() {};
+    virtual void medessiner();
 
-    protected:
-        std::vector<Polygon> m_polygon;
+protected:
+    std::vector<Polygon> m_polygon;
 
-    private:
+private:
 };
 
 #endif // ETOILE_H

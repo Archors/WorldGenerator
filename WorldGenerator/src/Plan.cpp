@@ -13,11 +13,12 @@ void Plan::medessiner()
 {
     for(unsigned int i=0; i<m_objet.size(); ++i)
     {
+        drawEllipse();
         m_objet[i]->medessiner();
     }
 }
 
- void Plan::createArbre(double x,double y)
+void Plan::createArbre(double x,double y)
 {
     double taille = ((m_taille*y)/700) + alea(0,10,m_seed);
     m_objet.push_back(new Arbre(Coords(x,y),taille,alea(0,50,m_seed)));
@@ -95,13 +96,10 @@ void Plan::trierObjet()
     }
 }
 
-<<<<<<< HEAD
+
 void Plan::drawEllipse()
-=======
-/*
-void Plan::drawEllipse
->>>>>>> 5026c8733b0d668606ddb7db0887591e99bf80e5
 {
-    Ellipse *theellispe = new Ellipse(Coords(500,1600),100,500,500);
+    Ellipse *theellispe = new Ellipse(Coords(500,1600),Couleur(0,255,0),500.0,500.0);
+    theellispe->sedessiner();
 }
-*/
+

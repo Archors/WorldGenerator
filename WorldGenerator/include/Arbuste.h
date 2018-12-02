@@ -4,13 +4,13 @@
 
 class Arbuste
 {
-    public:
-        Arbuste();
-        virtual ~Arbuste();
+public:
+    Arbuste();
+    virtual ~Arbuste();
 
-    protected:
+protected:
 
-    private:
+private:
 };
 
 #endif // ARBUSTE_H

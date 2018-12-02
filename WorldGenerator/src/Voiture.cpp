@@ -5,15 +5,21 @@ Voiture::Voiture(Coords const & lacoord,double taille,double generator):Object(l
     int a,b,c;
     if(!aleaentier(0,3,m_seed))
     {
-        a=103;b=113;c=121;
+        a=103;
+        b=113;
+        c=121;
     }
     else if(aleaentier(0,3,m_seed)==1)
     {
-        a=19;b=14;c=10;
+        a=19;
+        b=14;
+        c=10;
     }
     else
     {
-        a=217;b=1;c=21;
+        a=217;
+        b=1;
+        c=21;
     }
 
     Couleur recipient(a,b,c);
@@ -40,12 +46,12 @@ Voiture::Voiture(Coords const & lacoord,double taille,double generator):Object(l
 
 void Voiture::medessiner()
 {
-    for(unsigned int i=0;i<m_polygon.size();i++)
+    for(unsigned int i=0; i<m_polygon.size(); i++)
     {
         m_polygon[i].sedessiner();
     }
 
-    for(unsigned int i=0;i<m_ellipse.size();i++)
+    for(unsigned int i=0; i<m_ellipse.size(); i++)
     {
         m_ellipse[i].sedessiner();
     }

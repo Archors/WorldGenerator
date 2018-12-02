@@ -15,9 +15,9 @@ void Polygon::sedessiner()
         monFlux.seekp(0,std::ios::end);
         monFlux<<"\n<polygon points=\" ";  // On va se placer à la fin puis ecrit la div du polygon
 
-        for(unsigned int i=0;i<m_coords.size();i++)
+        for(unsigned int i=0; i<m_coords.size(); i++)
         {
-        monFlux<<m_coords[i]<<" ";    // On affiche les coordonnées les une à la suite des autres
+            monFlux<<m_coords[i]<<" ";    // On affiche les coordonnées les une à la suite des autres
         }
         monFlux<<"\"";
         monFlux<<" style=\"fill:"<<m_couleur<<"\"";

@@ -4,13 +4,13 @@
 
 class Bateau
 {
-    public:
-        Bateau();
-        virtual ~Bateau();
+public:
+    Bateau();
+    virtual ~Bateau();
 
-    protected:
+protected:
 
-    private:
+private:
 };
 
 #endif // BATEAU_H

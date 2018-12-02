@@ -32,7 +32,7 @@ int main()
             cout<<"Saisissez la densite d'objet dans le monde entre 0 et 50\n0 = pas d'objet, 50 = maximum d'objet"<<endl;
             do
             {
-               cin>>densite;
+                cin>>densite;
             }
             while(densite > 50 || densite < 0);
             break;
@@ -61,30 +61,6 @@ int main()
         }
         }
     }
-    /*
-    vector <Object*> test;
-    mt19937 laseed(0);
-
-
-    for(int i=0;i<5;i++)
-    for(int j=0;j<5;j++)
-    {
-        test.push_back(new Etoile(Coords(100+100*i,100+100*j),50,alea(0,50,laseed)));
-    }
-
-    //test.push_back(new Etoile(Coords(100,300),50,alea(0,50,laseed)));
-
-    for (unsigned int i=0;i<test.size();i++)
-    {
-        test[i]->medessiner();
-    }
-
-    for(unsigned int i=0; i<test.size(); i++)
-    {
-        delete test[i];
-    }
-    */
-
     return 0;
 }
 

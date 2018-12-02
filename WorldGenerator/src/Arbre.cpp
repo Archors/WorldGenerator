@@ -7,15 +7,21 @@ Arbre::Arbre(Coords const & lacoord,double taille,double generator):Object(lacoo
     int a,b,c;
     if(!aleaentier(0,3,m_seed))
     {
-        a=56;b=111;c=62;
+        a=56;
+        b=111;
+        c=62;
     }
     else if(aleaentier(0,3,m_seed)==1)
     {
-        a=20;b=148;c=20;
+        a=20;
+        b=148;
+        c=20;
     }
     else
     {
-        a=0;b=86;c=27;
+        a=0;
+        b=86;
+        c=27;
     }
 
     Couleur recipient(a,b,c);
@@ -81,12 +87,12 @@ Arbre::Arbre(Coords const & lacoord,double taille,double generator):Object(lacoo
 void Arbre::medessiner()
 {
     std::cout<<alea(0,50,m_seed)<<std::endl;
-    for(unsigned int i=0;i<m_polygon.size();i++)
+    for(unsigned int i=0; i<m_polygon.size(); i++)
     {
         std::cout<<"dans le medessiner\n";
         m_polygon[i].sedessiner();
     }
-    for(unsigned int i=0;i<m_ellipse.size();i++)
+    for(unsigned int i=0; i<m_ellipse.size(); i++)
     {
         m_ellipse[i].sedessiner();
     }

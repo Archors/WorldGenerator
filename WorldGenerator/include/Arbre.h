@@ -13,17 +13,17 @@
 // https://www.ljll.math.upmc.fr/courscpp/Sections/Sect08-E3.html
 class Arbre : public Object
 {
-    public:
-        Arbre(){};
-        Arbre(Coords const & lacoord,double taille,double generator);
-        virtual ~Arbre(){};
-        virtual void medessiner();
+public:
+    Arbre() {};
+    Arbre(Coords const & lacoord,double taille,double generator);
+    virtual ~Arbre() {};
+    virtual void medessiner();
 
-    protected:
-        std::vector <Polygon> m_polygon;
-        std::vector <Ellipse> m_ellipse;
+protected:
+    std::vector <Polygon> m_polygon;
+    std::vector <Ellipse> m_ellipse;
 
-    private:
+private:
 };
 
 #endif // ARBRE_H

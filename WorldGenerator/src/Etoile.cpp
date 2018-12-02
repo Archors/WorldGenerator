@@ -16,7 +16,7 @@ Etoile::Etoile(Coords const & lacoord,double taille,double generator):Object(lac
 
 void Etoile::medessiner()
 {
-    for(unsigned int i=0;i<m_polygon.size();i++)
+    for(unsigned int i=0; i<m_polygon.size(); i++)
     {
         m_polygon[i].sedessiner();
     }

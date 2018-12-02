@@ -5,14 +5,17 @@
 
 class Rectangle : public Polygon
 {
-    public:
-        Rectangle(){};
-        virtual ~Rectangle(){};
-        virtual void sedessiner(){std::cout<<"rectangle que je suis\n";};
+public:
+    Rectangle() {};
+    virtual ~Rectangle() {};
+    virtual void sedessiner()
+    {
+        std::cout<<"rectangle que je suis\n";
+    };
 
-    protected:
+protected:
 
-    private:
+private:
 };
 
 #endif // RECTANGLE_H

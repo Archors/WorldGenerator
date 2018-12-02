@@ -5,17 +5,17 @@
 
 class Nuage : public Object
 {
-    public:
-        Nuage(){};
-        Nuage(Coords const & lacoord,double taille,double generator);
-        virtual ~Nuage(){};
-        virtual void medessiner();
+public:
+    Nuage() {};
+    Nuage(Coords const & lacoord,double taille,double generator);
+    virtual ~Nuage() {};
+    virtual void medessiner();
 
-    protected:
+protected:
 
-        std::vector <Ellipse> m_ellipse;
+    std::vector <Ellipse> m_ellipse;
 
-    private:
+private:
 };
 
 #endif // NUAGE_H
