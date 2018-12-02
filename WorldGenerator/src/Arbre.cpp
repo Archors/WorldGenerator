@@ -42,7 +42,7 @@ Arbre::Arbre(Coords const & lacoord,double taille,double generator):Object(lacoo
     ///Meme chose avec l'ellipse, elle est plus facile car elle n'a pas de conteneurs de Coord
     ///donc la créee directement grâce au constructeur
 
-    m_ellipse.push_back(Ellipse(Coords(m_barycentre.getx(),m_barycentre.gety()-m_taille/2),recipient,m_taille/3,m_taille/5));
+    m_ellipse.push_back(Ellipse(Coords(m_barycentre.getx(),m_barycentre.gety()-m_taille/2),recipient,m_taille/aleaentier(3,5,m_seed),m_taille/alea(3,5,m_seed)));
     /// CREATION D'UNE BRANCHE ///////////////////////////////////
 
     int possible=aleaentier(0,4,m_seed);

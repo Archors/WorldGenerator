@@ -15,9 +15,9 @@ Bateau::Bateau(Coords const & lacoord,double taille,double generator):Object(lac
     }
     else
     {
-        a=49;
-        b=140;
-        c=231;
+        a=108;
+        b=2;
+        c=119;
 
         e=254;
         f=27;
