@@ -11,7 +11,7 @@ Nuage::Nuage(Coords const & lacoord,double taille,double generator):Object(lacoo
     }
     else if(aleaentier(0,3,m_seed)==1)
     {
-        a=169;b=234;c=254;
+        a=142;b=162;c=198;
     }
     else
     {

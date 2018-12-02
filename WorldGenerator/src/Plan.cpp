@@ -95,7 +95,13 @@ void Plan::trierObjet()
     }
 }
 
+<<<<<<< HEAD
 void Plan::drawEllipse()
+=======
+/*
+void Plan::drawEllipse
+>>>>>>> 5026c8733b0d668606ddb7db0887591e99bf80e5
 {
     Ellipse *theellispe = new Ellipse(Coords(500,1600),100,500,500);
 }
+*/
