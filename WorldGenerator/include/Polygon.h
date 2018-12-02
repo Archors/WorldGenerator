@@ -14,6 +14,7 @@ public:
     virtual ~Polygon() {};
     virtual void sedessiner();
     void addPoint(Coords const & lacoord);
+    Coords getbary(){return m_barycentre;};
 
 protected:
     std::vector <Coords> m_coords;
