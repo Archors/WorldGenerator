@@ -101,6 +101,7 @@ void Plan::createCiel()
 
 void Plan::createListVoiture()
 {
+    for(int i=0;i<m_densite/10;i++)
     createVoiture();
 }
 
@@ -128,7 +129,7 @@ void Plan::trierObjet()
 
 void Plan::drawSol()
 {
-    Ellipse *theellispe = new Ellipse(Coords(500,2050),Couleur(127,221,76),1500,1700);
+    Ellipse *theellispe = new Ellipse(Coords(500,4100),Couleur(127,221,76),3500,3700);
     theellispe->sedessiner();
     delete theellispe;
 }
