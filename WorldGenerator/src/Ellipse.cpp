@@ -5,8 +5,6 @@ void Ellipse::sedessiner()
     std::string const nomFichier("output.svg");
     std::ofstream monFlux(nomFichier.c_str(),std::ios::app);//ouverture de fichier, code identique à celui d'openclassroom
 
-    std::cout<<"le barycentre :"<<m_barycentre<<std::endl<<m_couleur<<std::endl;//simple test
-
     if(monFlux)
     {
         monFlux.seekp(0,std::ios::end);

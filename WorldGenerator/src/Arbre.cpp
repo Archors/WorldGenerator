@@ -86,15 +86,12 @@ Arbre::Arbre(Coords const & lacoord,double taille,double generator):Object(lacoo
 
 void Arbre::medessiner()
 {
-    std::cout<<alea(0,50,m_seed)<<std::endl;
     for(unsigned int i=0; i<m_polygon.size(); i++)
     {
-        std::cout<<"dans le medessiner\n";
         m_polygon[i].sedessiner();
     }
     for(unsigned int i=0; i<m_ellipse.size(); i++)
     {
         m_ellipse[i].sedessiner();
     }
-    //Object::medessiner();
 }

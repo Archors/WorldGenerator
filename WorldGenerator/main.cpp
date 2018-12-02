@@ -1,7 +1,6 @@
 #include <iostream>
 #include <vector>
 #include "Paysage.h"
-#include "Triangle.h"
 #include "Polygon.h"
 #include "Arbre.h"
 #include "Nuage.h"
@@ -10,11 +9,10 @@
 
 using namespace std;
 
-// IMPORTANT : effacer à chaque fois le fin de div de l'objet et le </svg> avant de compiler
 int main()
 {
     int choix=0;
-    double seed=0,densite=0,taille=0;
+    double seed=0,densite=1,taille=1;
     while(choix != 5)
     {
         cout<<"Menu du generateur de monde\nQue souhaitez vous faire ?\n1.Choisir une seed\n2.Choisir la densite des objets\n3.Choisir la taille des objets\n4.Dessiner dans le fichier svg\n5.Quitter"<<endl;
@@ -23,7 +21,7 @@ int main()
         {
         case 1:
         {
-            int seed;
+            int seed;/// Tu declares pas deux fois seed là ? même si ils sont pas du même type
             cout<<"Saisissez le seed de la generation du monde"<<endl;
             cin>>seed;
             break;
