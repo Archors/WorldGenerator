@@ -54,6 +54,6 @@ void Paysage::createplan()
 {
     m_plan.push_back(new Plan(m_densite,m_taille,m_seed,0,200));
     m_plan[0]->createCiel();
-    m_plan.push_back(new Plan(m_densite,m_taille,m_seed,400,700));
+    m_plan.push_back(new Plan(m_densite,m_taille,m_seed,450,700));
     m_plan[1]->createListArbre();
 }

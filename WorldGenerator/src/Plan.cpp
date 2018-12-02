@@ -11,9 +11,9 @@ Plan::~Plan()
 
 void Plan::medessiner()
 {
+    drawEllipse();
     for(unsigned int i=0; i<m_objet.size(); ++i)
     {
-        drawEllipse();
         m_objet[i]->medessiner();
     }
 }
@@ -46,7 +46,7 @@ void Plan::createListArbre()
             y = alea(m_min,m_max,m_seed);
             for(int j=0; j<i-1; ++j)
             {
-                if((x < m_objet[j]->getx()+(m_taille/3)) && (x > m_objet[j]->getx()-(m_taille/3)) && (y < m_objet[j]->gety()+(m_taille/3)) && (y > m_objet[j]->gety()-m_taille/3))
+                if((x < m_objet[j]->getx()+((m_taille+10)/3)) && (x > m_objet[j]->getx()-((m_taille+10)/3)) && (y < m_objet[j]->gety()+((m_taille+10)/3)) && (y > m_objet[j]->gety()-(m_taille+10)/3))
                 {
                     test=false;
                     break;
@@ -99,7 +99,7 @@ void Plan::trierObjet()
 
 void Plan::drawEllipse()
 {
-    Ellipse *theellispe = new Ellipse(Coords(500,1600),Couleur(0,255,0),500.0,500.0);
+    Ellipse *theellispe = new Ellipse(Coords(500,2100),Couleur(127,221,76),1500,1700);
     theellispe->sedessiner();
 }
 

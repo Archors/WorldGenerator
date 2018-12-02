@@ -6,6 +6,7 @@
 #include "Arbre.h"
 #include "Nuage.h"
 #include "Etoile.h"
+#include "Ellipse.h"
 
 using namespace std;
 
@@ -39,12 +40,13 @@ int main()
         }
         case 3:
         {
-            cout<<"Saisissez la taille des objets entre 0 et 100\n0 = tres petit, 100 = tres grand"<<endl;
+            cout<<"Saisissez la taille des objets entre 1 et 10\n1 = tres petit, 10 = tres grand"<<endl;
             do
             {
                 cin>>taille;
             }
-            while(taille < 0 || taille > 100);
+            while(taille < 1 || taille > 10);
+            taille*=10;
             break;
         }
         case 4:
