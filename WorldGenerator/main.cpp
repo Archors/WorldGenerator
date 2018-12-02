@@ -6,11 +6,13 @@
 #include "Nuage.h"
 #include "Etoile.h"
 #include "Ellipse.h"
+#include "Bateau.h"
 
 using namespace std;
 
 int main()
 {
+    /*
     int choix=0;
     double seed=0,densite=30,taille=50;
     while(choix != 5)
@@ -62,6 +64,27 @@ int main()
         }
         }
     }
+    */
+
+    vector<Object*> test;
+
+    mt19937 seed(0);
+
+    for(int i=0;i<5;i++)
+    for(int j=0;j<5;j++)
+    {
+        test.push_back(new Bateau(Coords(100+100*i,100+100*j),50,alea(0,50,seed)));
+    }
+
+    for(unsigned int i=0;i<test.size();i++)
+    {
+        test[i]->medessiner();
+    }
+    for(unsigned int i=0;i<test.size();i++)
+    {
+        delete test[i];
+    }
+
     return 0;
 }
 

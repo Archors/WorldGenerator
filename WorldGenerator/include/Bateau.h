@@ -1,14 +1,20 @@
 #ifndef BATEAU_H
 #define BATEAU_H
+#include <iostream>
+#include <vector>
+#include "Object.h"
+#include "Polygon.h"
 
-
-class Bateau
+class Bateau : public Object
 {
 public:
-    Bateau();
-    virtual ~Bateau();
+    Bateau(){};
+    Bateau(Coords const & lacoord,double taille,double generator);
+    virtual ~Bateau() {};
+    virtual void medessiner();
 
 protected:
+    std::vector<Polygon> m_polygon;
 
 private:
 };
