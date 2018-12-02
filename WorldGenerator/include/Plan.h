@@ -12,7 +12,7 @@
 class Plan
 {
 public:
-    Plan(double densite, double taille,std::mt19937 laseed, int min, int max);
+    Plan(double densite, double taille,double laseed, int min, int max);
     virtual ~Plan();
     void medessiner();
     void createArbre(double x, double y);
@@ -31,6 +31,7 @@ protected:
     ///Interval de creation du plan
     double m_densite;
     double m_taille;
+    double m_seed1;
     std::mt19937 m_seed;
     ///Minimum et maximum des coordonnes de generation d'objet dans le plan
     int m_min;

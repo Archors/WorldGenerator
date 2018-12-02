@@ -14,7 +14,7 @@ using namespace std;
 int main()
 {
     int choix=0;
-    double seed=0,densite=0,taille=0;
+    double seed=0,densite=30,taille=50;
     while(choix != 5)
     {
         cout<<"Menu du generateur de monde\nQue souhaitez vous faire ?\n1.Choisir une seed\n2.Choisir la densite des objets\n3.Choisir la taille des objets\n4.Dessiner dans le fichier svg\n5.Quitter"<<endl;
@@ -60,6 +60,8 @@ int main()
         case 5:
         {
             cout<<"Fermeture du programme"<<endl;
+            ///Mettre la sauvegarde ici
+            break;
         }
         }
     }

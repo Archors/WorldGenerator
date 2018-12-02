@@ -18,7 +18,7 @@ public:
 
 protected:
     std::vector<Plan*> m_plan;
-    std::mt19937 m_seed;
+    double m_seed;
     double m_densite;
     double m_taille;
 private:

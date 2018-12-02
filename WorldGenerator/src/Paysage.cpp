@@ -2,8 +2,7 @@
 
 Paysage::Paysage(double seed,double taille,double densite)
 {
-    std::mt19937 laseed{seed};
-    m_seed=laseed;
+    m_seed=seed;
     m_taille=taille;
     m_densite=densite;
 }
