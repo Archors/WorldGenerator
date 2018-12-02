@@ -10,12 +10,15 @@
 class Paysage
 {
 public:
+    Paysage(){};
     Paysage(double seed, double taille, double densite);
     virtual ~Paysage();
     ///Fonction pour dessiner
     void medessiner();
     ///Permet de créer 4 plans differents pour l'image
     void createplan();
+    void charger();
+    void sauvegarder();
 
 protected:
     std::vector<Plan*> m_plan;

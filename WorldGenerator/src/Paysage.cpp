@@ -61,3 +61,36 @@ void Paysage::createplan()
     m_plan[3]->createListBateau();
 }
 
+void Paysage::sauvegarder()
+{
+    std::string const nomFichier("source.txt");
+    std::ofstream monFlux(nomFichier.c_str());
+
+    if(monFlux)
+    {
+        monFlux<<m_seed<<" "<<m_densite<<" "<<m_taille;
+    }
+    else
+    {
+        std::cout<<"ERROR : Pas de "<<nomFichier<<std::endl;
+    }
+
+}
+
+void Paysage::charger()
+{
+    std::string const nomFichier("source.txt");
+    std::ifstream monFlux(nomFichier.c_str());
+
+    if(monFlux)
+    {
+        monFlux>>m_seed;
+        monFlux>>m_densite;
+        monFlux>>m_taille;
+        std::cout<<m_seed<<" "<<m_densite<<" "<<m_taille<<std::endl;
+    }
+    else
+    {
+        std::cout<<"Error : Pas de "<<nomFichier<<std::endl;
+    }
+}

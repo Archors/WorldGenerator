@@ -15,9 +15,10 @@ int main()
 
     int choix=0;
     double seed=0,densite=30,taille=70;
-    while(choix != 5)
+    while(choix != 7)
     {
-        cout<<"Menu du generateur de monde\nQue souhaitez vous faire ?\n1.Choisir une seed\n2.Choisir la densite des objets\n3.Choisir la taille des objets\n4.Dessiner dans le fichier svg\n5.Quitter"<<endl;
+        cout<<"Menu du generateur de monde\nQue souhaitez vous faire ?\n1.Choisir une seed\n2.Choisir la densite des objets\n3.Choisir la taille des objets\n4.Dessiner dans le fichier svg\n";
+        cout<<"5.Sauvegarder\n6.Charger\n7.Quitter\n";
         cin>>choix;
         switch (choix)
         {
@@ -57,6 +58,23 @@ int main()
             break;
         }
         case 5:
+        {
+            cout<<"Sauvegarde effectuée\n";
+            Paysage * thepaysage = new Paysage(seed,taille,densite);
+            thepaysage->sauvegarder();
+            delete thepaysage;
+            break;
+        }
+        case 6:
+        {
+            Paysage * thepaysage = new Paysage();
+            thepaysage->charger();
+            thepaysage->createplan();
+            thepaysage->medessiner();
+            delete thepaysage;
+            break;
+        }
+        case 7:
         {
             cout<<"Fermeture du programme"<<endl;
             ///Mettre la sauvegarde ici
