@@ -21,7 +21,6 @@ int main()
         {
         case 1:
         {
-            int seed;/// Tu declares pas deux fois seed là ? même si ils sont pas du même type
             cout<<"Saisissez le seed de la generation du monde"<<endl;
             cin>>seed;
             break;
