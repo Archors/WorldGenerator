@@ -18,8 +18,10 @@ void Plan::medessiner()
     {
         if(i==0 && m_choix==2)
             drawCiel();
-        if(i==2 && m_choix==1)
+        if(i==0 && m_choix==1)
             drawSol();
+        if(i==0 && m_choix==3)
+            drawMer();
         m_objet[i]->medessiner();
     }
 }
@@ -54,7 +56,7 @@ void Plan::createListArbre()
 {
     double x,y;
     bool test=false;
-    for(int i=0; i < 3*m_densite; i++)
+    for(int i=0; i < 2*m_densite; i++)
     {
         do
         {
@@ -136,6 +138,16 @@ void Plan::drawCiel()
     Ellipse *theellispe = new Ellipse(Coords(500,500),Couleur(0,191,255),1500,1700);
     theellispe->sedessiner();
     delete theellispe;
+}
+
+void Plan::drawMer()
+{
+    Polygon *thepolygon = new Polygon(Coords(0,0),Couleur(30,144,255));
+    thepolygon->addPoint(Coords(0,750));
+    thepolygon->addPoint(Coords(0,800));
+    thepolygon->addPoint(Coords(1000,800));
+    thepolygon->addPoint(Coords(1000,750));
+    thepolygon->sedessiner();
 }
 
 

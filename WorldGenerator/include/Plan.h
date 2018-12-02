@@ -30,6 +30,7 @@ public:
     void createCiel();
     void drawSol();
     void drawCiel();
+    void drawMer();
 
 protected:
     ///Liste polymorphique des objets contenu dans un plan

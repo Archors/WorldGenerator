@@ -57,7 +57,7 @@ void Paysage::createplan()
     m_plan[1]->createListVoiture();
     m_plan.push_back(new Plan(m_densite,m_taille,m_seed,450,700,1));
     m_plan[2]->createListArbre();
-    m_plan.push_back(new Plan(m_densite,m_taille,m_seed,750,800,0));
+    m_plan.push_back(new Plan(m_densite,m_taille,m_seed,750,800,3));
     m_plan[3]->createListBateau();
 }
 
