@@ -1,7 +1,10 @@
 #include "Plan.h"
 
-Plan::Plan(double densite, double taille,std::mt19937 laseed, int themin, int themax) : m_densite(densite), m_taille(taille), m_seed(laseed), m_min(themin), m_max(themax)
-{}
+Plan::Plan(double densite, double taille,double laseed, int themin, int themax) : m_densite(densite), m_taille(taille), m_seed1(laseed), m_min(themin), m_max(themax)
+{
+    std::mt19937 seed{m_seed1};
+    m_seed = seed;
+}
 
 Plan::~Plan()
 {
@@ -26,12 +29,12 @@ void Plan::createArbre(double x,double y)
 
 void Plan::createNuage()
 {
-    m_objet.push_back(new Nuage(Coords(alea(0,TAILLEX,m_seed),alea(m_min,m_max,m_seed)),m_taille,alea(0,50,m_seed)));
+    m_objet.push_back(new Nuage(Coords(alea(0,TAILLEX,m_seed),alea(m_min,m_max,m_seed)),m_taille/2,alea(0,50,m_seed)));
 }
 
 void Plan::createEtoile()
 {
-    m_objet.push_back(new Etoile(Coords(alea(0,TAILLEX,m_seed),alea(m_min,m_max,m_seed)),m_taille,alea(0,50,m_seed)));
+    m_objet.push_back(new Etoile(Coords(alea(0,TAILLEX,m_seed),alea(m_min,m_max,m_seed)),m_taille/2,alea(0,50,m_seed)));
 }
 
 void Plan::createListArbre()
@@ -46,7 +49,7 @@ void Plan::createListArbre()
             y = alea(m_min,m_max,m_seed);
             for(int j=0; j<i-1; ++j)
             {
-                if((x < m_objet[j]->getx()+((m_taille+10)/3)) && (x > m_objet[j]->getx()-((m_taille+10)/3)) && (y < m_objet[j]->gety()+((m_taille+10)/3)) && (y > m_objet[j]->gety()-(m_taille+10)/3))
+                if((x < m_objet[j]->getx()+((m_taille+20)/5)) && (x > m_objet[j]->getx()-((m_taille+20)/5)) && (y < m_objet[j]->gety()+((m_taille+20)/5)) && (y > m_objet[j]->gety()-(m_taille+20)/5))
                 {
                     test=false;
                     break;
@@ -99,7 +102,7 @@ void Plan::trierObjet()
 
 void Plan::drawEllipse()
 {
-    Ellipse *theellispe = new Ellipse(Coords(500,2100),Couleur(127,221,76),1500,1700);
+    Ellipse *theellispe = new Ellipse(Coords(500,2050),Couleur(127,221,76),1500,1700);
     theellispe->sedessiner();
 }
 
