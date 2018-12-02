@@ -95,7 +95,7 @@ void Plan::trierObjet()
     }
 }
 
-void Plan::drawEllipse
+void Plan::drawEllipse()
 {
-    Ellipse *theelispe
+    Ellipse *theellispe = new Ellipse(Coords(500,1600),100,500,500);
 }
