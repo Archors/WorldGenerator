@@ -12,7 +12,7 @@ int main()
 {
 
     int choix=0;
-    double seed=0,densite=30,taille=7;
+    double seed=0,densite=30,taille=70;
     while(choix != 7)
     {
         cout<<"Menu du generateur de monde\nQue souhaitez vous faire ?\n1.Choisir une seed\n2.Choisir la densite des objets\n3.Choisir la taille des objets\n4.Dessiner dans le fichier svg\n";
@@ -98,6 +98,10 @@ int main()
     {
         delete test[i];
     }*/
+
+    int a;
+    a=50;
+    cout<<a<<endl;
 
     return 0;
 }
