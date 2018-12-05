@@ -2,9 +2,9 @@
 #include "Paysage.h"
 
 /// Certains sous-programme ne figurent pas dans le diagramme de classe
-/// La raison est qu'ils ne servent Ã  rien dans le code final
+/// La raison est qu'ils ne servent à rien dans le code final
 /// Ils furents coder pour aider l'ecriture du code
-/// Il ne sont pas appelÃ©s dans cette version finale
+/// Il ne sont pas appelés dans cette version finale
 
 using namespace std;
 
@@ -57,7 +57,7 @@ int main()
         }
         case 5:
         {
-            cout<<"Sauvegarde effectuÃ©e\n";
+            cout<<"Sauvegarde effectuée\n";
             Paysage * thepaysage = new Paysage(seed,taille,densite);
             thepaysage->sauvegarder();
             delete thepaysage;
@@ -79,6 +79,8 @@ int main()
         }
         }
     }
+    
+    cout<<"Au revoir à tous ! \n";
 
     /*vector<Object*> test;
 
